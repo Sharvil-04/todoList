@@ -1,0 +1,14 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-datrk bg-dark">
+        <div><a href="https://www.google.com" class="navbar-brand text-white">Google</a></div>
+        <ul class="navbar-nav">
+            <li><a routerLink="/welcome/sharvilp" class="nav-link text-white" *ngIf="hardauthService.isUserLoggedIn()">Home</a></li>
+            <li><a routerLink="/todos" class="nav-link text-white" *ngIf="hardauthService.isUserLoggedIn()">Todo's</a></li>
+        </ul>
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li><a routerLink="/login" class="nav-link text-white" *ngIf="!hardauthService.isUserLoggedIn()">Login</a></li>
+            <li><a routerLink="/logout" class="nav-link text-white" *ngIf="hardauthService.isUserLoggedIn()">Logout</a></li>
+        </ul>
+    
+    </nav>
+</header>
