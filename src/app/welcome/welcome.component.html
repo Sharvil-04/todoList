@@ -5,3 +5,12 @@
 
     You can manage your todo's <a routerLink="/todos">here</a>
 </div>
+
+<div class="container">
+    <button (click)="getAPICall()" class="btn btn-success">Get API</button>
+</div>
+
+<div class="container" *ngIf="message">
+    <H2>Your customized Message from API</H2>
+    {{ message }}
+</div>
